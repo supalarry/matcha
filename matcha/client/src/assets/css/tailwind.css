@@ -2,4 +2,33 @@
 
 @tailwind components;
 
+@responsive {
+    .navigation-button-logged-in {
+        @apply block;
+        @apply px-2;
+        @apply py-2;
+        @apply font-semibold;
+        @apply text-purple-matcha;
+        @apply rounded-md;
+    }
+    .navigation-button-logged-in:hover {
+        @apply bg-purple-matcha;
+        @apply text-white-matcha;
+    }
+    @screen sm {
+        .navigation-button-logged-in {
+            @apply px-5;
+        }
+    }
+
+    .button-purple {
+        @apply bg-purple-matcha;
+        @apply text-white-matcha;
+        @apply rounded-xl;
+        @apply py-4;
+        @apply px-16;
+        @apply mx-auto;
+    }
+}
+
 @tailwind utilities;
