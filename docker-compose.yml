@@ -1,0 +1,32 @@
+version: '3.7'
+
+services:
+  client:
+    container_name: client
+    build:
+      context: ./matcha/client
+      dockerfile: Dockerfile
+    volumes:
+      - './matcha/client:/client'
+      - '/client/node_modules'
+    ports:
+      - '8080:8080'
+  server:
+    container_name: server
+    build:
+      context: ./matcha/server
+      dockerfile: Dockerfile
+    volumes:
+      - './matcha/server:/usr/src/server'
+      - '/server/node_modules'
+    ports:
+      - '8079:8079'
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    ports:
+      - 33061:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: matcha
