@@ -28,6 +28,7 @@
         @apply py-4;
         @apply px-16;
         @apply mx-auto;
+        @apply font-bold;
     }
 }
 
