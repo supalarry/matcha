@@ -22,6 +22,7 @@
     }
 
     .button-purple {
+        @apply tracking-wide;
         @apply bg-purple-matcha;
         @apply text-white-matcha;
         @apply rounded-xl;
@@ -29,6 +30,21 @@
         @apply px-16;
         @apply mx-auto;
         @apply font-bold;
+    }
+
+    .matcha-input {
+        @apply border-2;
+        @apply border-purple-matcha;
+        @apply rounded-lg;
+        @apply text-purple-matcha;
+        @apply bg-white-matcha;
+        @apply py-4;
+        @apply px-8;
+    }
+
+    .matcha-input:focus {
+        @apply border-purple-matcha;
+        outline: none;
     }
 }
 

@@ -21,7 +21,7 @@
       </div>
     </div>
     <div id="links" v-on:click="isOpen = !isOpen" v-bind:class="isOpen ? 'block' : 'hidden'" class="px-2 pb-5 text-center sm:p-0 sm:block sm:flex sm:items-center">
-      <div class="sm:flex sm:bg-purple-matcha sm:border-2 sm:border-purple-matcha sm:rounded-md">
+      <div class="sm:flex sm:bg-purple-matcha sm:border-2 sm:border-purple-matcha sm:rounded-lg">
         <router-link v-if="!loggedIn" to="/login" class="navigation-button-logged-in sm:hover:bg-white-matcha sm:hover:text-purple-matcha sm:text-purple-matcha sm:bg-white-matcha sm:py-2 sm:px-8 sm:rounded-md">Sign In</router-link>
         <router-link v-if="!loggedIn" to="/register" class="navigation-button-logged-in sm:hover:bg-purple-matcha sm:hover:text-white-matcha sm:text-white-matcha sm:py-2 sm:px-8">Get Started</router-link>
       </div>
