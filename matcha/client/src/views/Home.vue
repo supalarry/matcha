@@ -2,10 +2,12 @@
   <!-- eslint-disable max-len -->
   <!-- eslint-disable no-trailing-spaces -->
   <div class="home mx-4">
+  <NavBar></NavBar>
+
   <section class="shadow-lg mb-8 h-full flex rounded-lg">
     <div class="intro bg-white-matcha rounded-lg w-full md:w-2/3
 flex flex-col justify-center md:rounded-tr-none md:rounded-br-none">
-      <div class="mx-auto text-left">
+      <div class="mx-auto text-center md:text-left">
         <h1 class="text-5xl sm:text-6xl font-bold text-gray-matcha">Someone<br>
           is waiting<br>
           for you</h1>
@@ -47,18 +49,21 @@ flex flex-col justify-center md:rounded-tr-none md:rounded-br-none">
       <h1 class="text-4xl md:text-6xl text-gray-matcha text-center font-bold leading-none z-10">It is your turn</h1>
       <h1 class="text-2xl text-gray-matcha text-center my-8 z-10">More than 4 million people matched</h1>
       <button class="button-purple z-10">Get started</button>
-      <img src="../assets/home/link.png" id="link" class="hidden lg:inline-block absolute top-0 right-0">
-      <img src="../assets/home/link.png" id="link" class="hidden lg:inline-block absolute bottom-0 left-0">
     </div>
 
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/shared/NavBar.vue';
+import Footer from '@/components/shared/Footer.vue';
 
 export default {
   name: 'Home',
   components: {
+    NavBar,
+    Footer,
   },
 };
 </script>
@@ -76,10 +81,6 @@ export default {
 .guide {
   background-color: #6e72fc;
   background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
-}
-
-#link {
-  opacity: 0.03;
 }
 
 @responsive {

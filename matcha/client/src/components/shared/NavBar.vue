@@ -1,7 +1,7 @@
 <template>
   <!-- eslint-disable max-len -->
   <!-- eslint-disable vue/no-deprecated-v-on-native-modifier -->
-  <nav class="mx-4 sm:flex sm:justify-between sm:items-center sm:py-5">
+  <nav class="sm:flex sm:justify-between sm:items-center sm:py-5">
     <div class="flex items-center justify-between px-5 py-3 sm:p-0">
       <div id="logo">
         <router-link to="/">
