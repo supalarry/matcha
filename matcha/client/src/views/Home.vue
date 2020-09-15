@@ -43,10 +43,12 @@ flex flex-col justify-center md:rounded-tr-none md:rounded-br-none">
       </div>
     </div>
 
-    <div class="shadow-lg rounded-lg py-16 px-8 mb-8 w-full flex flex-col justify-center lg:px-16">
-      <h1 class="text-4xl md:text-6xl text-gray-matcha text-center font-bold leading-none">It is your turn</h1>
-      <h1 class="text-2xl text-gray-matcha text-center my-8">More than 4 million people matched</h1>
-      <button class="button-purple">Get started</button>
+    <div class="overflow-hidden relative shadow-lg rounded-lg py-16 px-8 mb-8 w-full flex flex-col justify-center lg:px-16">
+      <h1 class="text-4xl md:text-6xl text-gray-matcha text-center font-bold leading-none z-10">It is your turn</h1>
+      <h1 class="text-2xl text-gray-matcha text-center my-8 z-10">More than 4 million people matched</h1>
+      <button class="button-purple z-10">Get started</button>
+      <img src="../assets/home/link.png" id="link" class="hidden lg:inline-block absolute top-0 right-0">
+      <img src="../assets/home/link.png" id="link" class="hidden lg:inline-block absolute bottom-0 left-0">
     </div>
 
   </div>
@@ -74,6 +76,10 @@ export default {
 .guide {
   background-color: #6e72fc;
   background-image: linear-gradient(315deg, #6e72fc 0%, #ad1deb 74%);
+}
+
+#link {
+  opacity: 0.03;
 }
 
 @responsive {
