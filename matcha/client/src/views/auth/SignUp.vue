@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable max-len -->
-  <!-- eslint-disable vue/no-deprecated-v-on-native-modifier -->
+  <!-- eslint-disable vue/no-unused-vars -->
   <!-- eslint-disable no-trailing-spaces -->
   <div id="signup" class="mx-4 h-screen flex flex-col justify-center items-center">
 
@@ -16,12 +16,31 @@
       </div>
 
       <div class="flex flex-col items-center w-full mt-4">
-        <input type="text" placeholder="First Name" required class="matcha-input">
-        <input type="text" placeholder="Last Name" required class="matcha-input">
-        <input type="text" placeholder="Email" required class="matcha-input">
-        <input type="text" placeholder="Username" required class="matcha-input">
-        <input type="password" placeholder="Password" required class="matcha-input">
-        <button class="bg-purple-matcha w-full rounded-md text-white-matcha py-2 mt-4 opacity-50">Sign Up</button>
+        <ValidationObserver v-slot="{ handleSubmit, invalid }">
+          <form @submit.prevent="handleSubmit(onSubmit)">
+            <ValidationProvider name="First Name" rules="required|alpha|max:20" v-slot="{errors}">
+              <input type="text" placeholder="First Name" v-model="formData.firstName" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <ValidationProvider name="Last Name" rules="required|alpha|max:20" v-slot="{errors}">
+              <input type="text" placeholder="Last Name" v-model="formData.lastName" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <ValidationProvider name="Email" rules="required|email|max:50" v-slot="{errors}">
+              <input type="email" placeholder="Email" v-model="formData.email" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <ValidationProvider name="Username" rules="required|alpha_dash|max:20" v-slot="{errors}">
+              <input type="text" placeholder="Username" v-model="formData.username" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <ValidationProvider name="Password" rules="required|max:16|min:8" v-slot="{errors}">
+              <input type="password" placeholder="Password" v-model="formData.password" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <input type="submit" :disabled="invalid" value="Sign Up" v-bind:class="{'bg-purple-matcha':true, 'w-full': true, 'rounded-md': true, 'text-white-matcha': true, 'py-2': true, 'mt-4': true, 'opacity-50': invalid, 'cursor-pointer': !invalid}">
+          </form>
+        </ValidationObserver>
       </div>
     </div>
 
@@ -33,7 +52,25 @@
 
 <script>
 
+/* eslint-disable */
 export default {
+  data: () => ({
+    formData: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      username: '',
+      password: '',
+    },
+  }),
+  methods: {
+    onSubmit() {
+      // console.log(this.formData);
+      console.log('nice');
+    },
+  },
+  computed: {
+  },
   components: {
   },
 };

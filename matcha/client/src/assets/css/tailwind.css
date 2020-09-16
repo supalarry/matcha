@@ -48,14 +48,20 @@
         @apply text-gray-matcha;
         @apply bg-white-matcha;
         @apply py-1;
-        @apply px-4;
-        @apply my-1;
+        @apply px-2;
+        @apply mt-2;
         @apply w-full;
     }
 
     .matcha-input:focus {
         @apply border-gray-500;
         outline: none;
+    }
+
+    .matcha-input-error {
+        @apply text-red-500;
+        @apply text-sm;
+        @apply font-bold;
     }
 }
 

@@ -13,9 +13,19 @@
       </div>
 
       <div class="flex flex-col items-center w-full mt-4">
-        <input type="text" placeholder="Username" required class="matcha-input">
-        <input type="password" placeholder="Password" required class="matcha-input">
-        <button class="bg-purple-matcha w-full rounded-md text-white-matcha py-2 mt-4 opacity-50">Sign In</button>
+        <ValidationObserver v-slot="{ handleSubmit, invalid }">
+          <form @submit.prevent="handleSubmit(onSubmit)">
+            <ValidationProvider name="Username" rules="required|max:20" v-slot="{errors}">
+              <input type="text" placeholder="Username" v-model="formData.username" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <ValidationProvider name="Password" rules="required|max:100" v-slot="{errors}">
+              <input type="password" placeholder="Password" v-model="formData.password" class="matcha-input">
+              <span class="matcha-input-error">{{ errors[0] }}</span>
+            </ValidationProvider>
+            <input type="submit" :disabled="invalid" value="Sign In" v-bind:class="{'bg-purple-matcha':true, 'w-full': true, 'rounded-md': true, 'text-white-matcha': true, 'py-2': true, 'mt-4': true, 'opacity-50': invalid, 'cursor-pointer': !invalid}">
+          </form>
+        </ValidationObserver>
       </div>
     </div>
 
@@ -28,6 +38,17 @@
 <script>
 
 export default {
+  data: () => ({
+    formData: {
+      username: '',
+      password: '',
+    },
+  }),
+  methods: {
+    onSubmit() {
+      console.log('nice');
+    },
+  },
   components: {
   },
 };
