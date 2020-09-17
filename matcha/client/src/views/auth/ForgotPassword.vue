@@ -44,7 +44,7 @@
       </div>
     </div>
     <div class="flex flex-col justify-center items-center bg-white border-2 border-gray-200 rounded-md px-4 sm:px-8 py-4 w-full max-w-sm mt-4">
-      <h1 class="text-sm"><span class="text-blue-500"><router-link to="signin">Back to signing in</router-link></span></h1>
+      <h1 class="text-sm"><span class="text-blue-500"><router-link to="/accounts/signin">Back to signing in</router-link></span></h1>
     </div>
   </div>
 

@@ -59,7 +59,7 @@
     </div>
 
     <div class="flex flex-col justify-center items-center bg-white border-2 border-gray-200 rounded-md px-4 sm:px-8 py-4 w-full max-w-sm mt-4">
-      <h1 class="text-sm">Have an account? <span class="text-blue-500"><router-link to="signin">Sign in</router-link></span></h1>
+      <h1 class="text-sm">Have an account? <span class="text-blue-500"><router-link to="/accounts/signin">Sign in</router-link></span></h1>
     </div>
   </div>
 </template>

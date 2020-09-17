@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import SignUp from '../views/auth/SignUp.vue';
 import SignIn from '../views/auth/SignIn.vue';
 import ForgotPassword from '../views/auth/ForgotPassword.vue';
+import AccountConfirmed from '../views/auth/AccountConfirmed.vue';
 
 Vue.use(VueRouter);
 
@@ -14,19 +15,24 @@ const routes = [
     component: Home,
   },
   {
-    path: '/signup',
+    path: '/accounts/signup',
     name: 'SignUp',
     component: SignUp,
   },
   {
-    path: '/signin',
+    path: '/accounts/signin',
     name: 'SignIn',
     component: SignIn,
   },
   {
-    path: '/forgotpassword',
+    path: '/accounts/password/reset',
     name: 'ForgotPassword',
     component: ForgotPassword,
+  },
+  {
+    path: '/accounts/confirmed',
+    name: 'AccountConfirmed',
+    component: AccountConfirmed,
   },
 ];
 
