@@ -4,7 +4,7 @@ import Home from '../views/Home.vue';
 import SignUp from '../views/auth/SignUp.vue';
 import SignIn from '../views/auth/SignIn.vue';
 import ForgotPassword from '../views/auth/ForgotPassword.vue';
-import AccountConfirmed from '../views/auth/AccountConfirmed.vue';
+import AccountVerified from '../views/auth/AccountVerified.vue';
 
 Vue.use(VueRouter);
 
@@ -30,9 +30,9 @@ const routes = [
     component: ForgotPassword,
   },
   {
-    path: '/accounts/confirmed',
-    name: 'AccountConfirmed',
-    component: AccountConfirmed,
+    path: '/accounts/verified',
+    name: 'AccountVerified',
+    component: AccountVerified,
   },
 ];
 

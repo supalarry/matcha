@@ -48,7 +48,7 @@
         @apply text-gray-800;
         @apply bg-white-matcha;
         @apply py-1;
-        @apply px-2;
+        @apply px-3;
         @apply mt-2;
         @apply w-full;
     }
@@ -62,6 +62,88 @@
         @apply text-red-500;
         @apply text-sm;
         @apply font-bold;
+    }
+
+    .auth-container {
+        @apply mx-4;
+        @apply h-screen;
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+    }
+
+    .auth-sub-container {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+        @apply bg-white;
+        @apply border-2;
+        @apply border-gray-200;
+        @apply rounded-md;
+        @apply px-4;
+        @apply py-8;
+        @apply w-full;
+        @apply max-w-sm;
+    }
+
+    @screen sm {
+        .auth-sub-container {
+            @apply px-8;
+        }
+    }
+
+    .auth-sub-container-content {
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+    }
+
+    .auth-sub-container-content-heading {
+        @apply text-base;
+        @apply font-bold;
+        @apply my-4;
+        @apply text-gray-matcha;
+        @apply text-center;
+    }
+
+    @screen sm {
+        .auth-sub-container-content-heading {
+            @apply text-2xl;
+        }
+    }
+
+    .auth-sub-container-content-paragraph {
+        @apply text-sm;
+        @apply text-gray-matcha;
+        @apply text-center;
+    }
+
+    .auth-sub-container-content-link {
+        @apply text-sm;
+        @apply text-blue-500;
+        @apply text-center;
+    }
+
+    .auth-sub-container-content-submit-button {
+        @apply bg-purple-matcha;
+        @apply w-full;
+        @apply rounded-md;
+        @apply text-white-matcha;
+        @apply py-2;
+        @apply mt-4;
+    }
+
+    .auth-sub-container-content-button {
+        @apply bg-purple-matcha;
+        @apply w-full;
+        @apply rounded-md;
+        @apply text-white-matcha;
+        @apply py-2;
+        @apply mt-4;
+        @apply cursor-pointer;
+        @apply text-center;
     }
 }
 
