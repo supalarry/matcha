@@ -3,7 +3,7 @@
   <div class="auth-container">
     <div class="auth-sub-container">
       <div class="auth-sub-container-content" v-if="!resetPasswordEmailSent">
-        <img src="../../assets/auth/lock.png" class="h-12 mt-4">
+        <img src="../../assets/auth/lock.png" class="h-12">
         <h1 class="auth-sub-container-content-heading">Forgot password?</h1>
         <h1 class="text-sm text-gray-matcha text-center">Enter your email and we will send you a link, so you can log in again</h1>
       </div>
@@ -24,7 +24,7 @@
         <h1 class="auth-sub-container-content-paragraph">Reset password link sent to {{formData.email}}</h1>
       </div>
     </div>
-    <div class="auth-sub-container mt-4">
+    <div class="auth-sub-container-thinner mt-4">
       <div class="auth-sub-container-content">
         <router-link to="/accounts/signin" class="auth-sub-container-content-link">Back to signing in</router-link>
       </div>

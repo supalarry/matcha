@@ -28,7 +28,7 @@
         <router-link to="/accounts/password/reset" class="auth-sub-container-content-link">Forgot password?</router-link>
       </div>
     </div>
-    <div class="auth-sub-container mt-4">
+    <div class="auth-sub-container-thinner mt-4">
       <div class="auth-sub-container-content">
         <h1 class="auth-sub-container-content-paragraph">Don't have an account? <router-link to="/accounts/signup" class="auth-sub-container-content-link">Sign up</router-link></h1>
       </div>

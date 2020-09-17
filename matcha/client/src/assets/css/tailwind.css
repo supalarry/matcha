@@ -88,6 +88,21 @@
         @apply max-w-sm;
     }
 
+    .auth-sub-container-thinner {
+        @apply flex;
+        @apply flex-col;
+        @apply justify-center;
+        @apply items-center;
+        @apply bg-white;
+        @apply border-2;
+        @apply border-gray-200;
+        @apply rounded-md;
+        @apply px-4;
+        @apply py-4;
+        @apply w-full;
+        @apply max-w-sm;
+    }
+
     @screen sm {
         .auth-sub-container {
             @apply px-8;
@@ -132,7 +147,7 @@
         @apply rounded-md;
         @apply text-white-matcha;
         @apply py-2;
-        @apply my-4;
+        @apply mt-4;
     }
 
     .auth-sub-container-content-button {
@@ -141,7 +156,7 @@
         @apply rounded-md;
         @apply text-white-matcha;
         @apply py-2;
-        @apply my-4;
+        @apply mt-4;
         @apply cursor-pointer;
         @apply text-center;
     }
