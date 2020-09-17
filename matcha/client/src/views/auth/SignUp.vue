@@ -34,9 +34,9 @@
               <input type="text" placeholder="Username" v-model="formData.username" class="matcha-input">
               <span class="matcha-input-error">{{ errors[0] }}</span>
             </ValidationProvider>
-            <ValidationProvider name="Password" rules="required|max:16|min:8" v-slot="{errors}">
+            <ValidationProvider name="Password" rules="required|min:6|validPassword" v-slot="{errors}">
               <input type="password" placeholder="Password" v-model="formData.password" class="matcha-input">
-              <span class="matcha-input-error">{{ errors[0] }}</span>
+              <span class="matcha-input-error">{{ passwordErrorHandler(errors[0]) }}</span>
             </ValidationProvider>
             <input type="submit" :disabled="invalid" value="Sign Up" v-bind:class="{'bg-purple-matcha':true, 'w-full': true, 'rounded-md': true, 'text-white-matcha': true, 'py-2': true, 'mt-4': true, 'opacity-50': invalid, 'cursor-pointer': !invalid}">
           </form>
@@ -64,6 +64,15 @@ export default {
     },
   }),
   methods: {
+    passwordErrorHandler(error) {
+      if (!error){
+        return;
+      }
+      if (error === 'The Password field is required') {
+        return error;
+      }
+      return 'This password is too easy to guess';
+    },
     onSubmit() {
       // console.log(this.formData);
       console.log('nice');
