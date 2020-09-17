@@ -2,6 +2,21 @@
 
 @tailwind components;
 
+::placeholder {
+    @apply font-normal;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #FFFFFE inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #2d3748 !important;
+}
+
 @responsive {
     .navigation-button-logged-in {
         @apply block;
@@ -45,7 +60,7 @@
         @apply border;
         @apply border-gray-300;
         @apply rounded-md;
-        @apply text-gray-matcha;
+        @apply text-gray-800;
         @apply bg-white-matcha;
         @apply py-1;
         @apply px-2;
