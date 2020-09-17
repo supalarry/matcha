@@ -27,6 +27,10 @@
           </form>
         </ValidationObserver>
       </div>
+      <hr class="bg-gray-300 w-full my-4">
+      <div class="flex flex-col items-center">
+        <span class="text-sm text-blue-500"><router-link to="forgotpassword">Forgot password?</router-link></span>
+      </div>
     </div>
 
     <div class="flex flex-col justify-center items-center bg-white border-2 border-gray-200 rounded-md px-4 sm:px-8 py-4 w-full max-w-sm mt-4">
